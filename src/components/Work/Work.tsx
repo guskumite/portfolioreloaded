@@ -10,6 +10,7 @@ import { RiFlagLine, RiMoonFill } from "react-icons/ri";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 export function Work() {
   const [selectedLang, setSelectedLang] = useState(0);
@@ -82,11 +83,11 @@ export function Work() {
                   {" "}
                   {project.name}{" "}
                 </h2>
-                <img
+                <Image
                   src={project.thumbnailUrl}
                   alt={project.name}
-                  height="200px"
-                  width="400px"
+                  height={200}
+                  width={400}
                 />
               </a>
               <div className="skills flex flex-row">
