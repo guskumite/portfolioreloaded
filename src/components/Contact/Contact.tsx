@@ -15,6 +15,12 @@ export function Mailer() {
   const rowparam = 4;
   const sendparam = ["Enviar", "Send"];
 
+  const getDocs = (id: string) => {
+    if (typeof window !== "undefined") {
+      return document.getElementById(id);
+    } else return null;
+  };
+
   const toggleLanguage = () => {
     setSelectedLang(selectedLang === 0 ? 1 : 0);
   };

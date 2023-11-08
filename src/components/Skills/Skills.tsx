@@ -26,9 +26,15 @@ export function Skills() {
     setSelectedLang(selectedLang === 0 ? 1 : 0);
   };
 
+  const getDocs = (id: string) => {
+    if (typeof window !== "undefined") {
+      return document.getElementById(id);
+    } else return null;
+  };
+
   const toggleDarkMode = () => {
     setSelectedDark(selectedDark === 0 ? 1 : 0);
-    const mainElement = document.getElementById("fifteenth");
+    const mainElement = getDocs("fifteenth") as HTMLElement;
     if (mainElement) {
       setFourteenth(selectedDark === 1 ? "#FFFFFF" : "#000000");
       setFourteenthA(
@@ -38,7 +44,7 @@ export function Skills() {
       );
       mainElement.style.backgroundColor = fourteenth;
       mainElement.className = fourteenthA;
-      const mainElement2 = document.getElementById("sixteenth");
+      const mainElement2 = getDocs("sixteenth") as HTMLElement;
       if (mainElement2) {
         setFifteenth(selectedDark === 1 ? "#FFFFFF" : "#000000");
         setFifteenthA(
@@ -51,7 +57,7 @@ export function Skills() {
       }
 
       setTwelfth(toggleDarkService(selectedDark, "twelfth"));
-      const twelfthElement = document.getElementById("twelfth");
+      const twelfthElement = getDocs("twelfth") as HTMLElement;
       if (twelfthElement) {
         twelfthElement.className = twelfth;
       }
@@ -60,7 +66,7 @@ export function Skills() {
       let tmpski;
       let tmpid2;
       for (let i = 0; i < projectCards.length; i++) {
-        tmpidx = document.getElementById(i.toString());
+        tmpidx = getDocs(i.toString());
         if (tmpidx) {
           tmpidx.className = selectedDark === 1 ? "text-white" : "text-black";
         }

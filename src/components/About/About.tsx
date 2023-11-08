@@ -33,9 +33,15 @@ export function About() {
 
   const lblLang1 = ["Acerca de mi", "About me"];
 
-  let toggled = document.getElementById("toggler2");
+  const getDocs = (id: string) => {
+    if (typeof window !== "undefined") {
+      return document.getElementById(id);
+    } else return null;
+  };
+
+  let toggled = getDocs("toggler2") as HTMLElement;
   useEffect(() => {
-    const mainElement = document.getElementById("thirteenth");
+    const mainElement = getDocs("thirteenth") as HTMLElement;
     if (mainElement) {
       setEleventh(selectedDark === 1 ? "#FFFFFF" : "#000000");
       setEleventhA(
@@ -68,7 +74,7 @@ export function About() {
 
   const toggleDarkMode = () => {
     setSelectedDark(selectedDark === 0 ? 1 : 0);
-    const mainElement = document.getElementById("thirteenth");
+    const mainElement = getDocs("thirteenth") as HTMLElement;
     if (mainElement) {
       setEleventh(selectedDark === 1 ? "#FFFFFF" : "#000000");
       setEleventhA(
@@ -81,7 +87,7 @@ export function About() {
     }
 
     setTwelfth(toggleDarkService(selectedDark, "twelfth"));
-    const twelfthElement = document.getElementById("twelfth");
+    const twelfthElement = getDocs("twelfth") as HTMLElement;
     if (twelfthElement) {
       twelfthElement.className = twelfth;
     }
@@ -90,7 +96,7 @@ export function About() {
     let tmpski;
     let tmpid2;
     for (let i = 0; i < projectCards.length; i++) {
-      tmpidx = document.getElementById(i.toString());
+      tmpidx = getDocs(i.toString()) as HTMLElement;
       if (tmpidx) {
         tmpidx.className = selectedDark === 1 ? "text-white" : "text-black";
       }
@@ -98,7 +104,7 @@ export function About() {
       if (skl1?.length > 0) {
         for (let j = 0; j < skl1?.length; j++) {
           tmpid2 = "x" + j.toString();
-          tmpski = document.getElementById(tmpid2);
+          tmpski = getDocs(tmpid2) as HTMLElement;
           if (tmpski) {
             tmpski.className =
               selectedDark === 1
@@ -111,7 +117,7 @@ export function About() {
       if (skl2?.length > 0) {
         for (let j = 0; j < skl2?.length; j++) {
           tmpid2 = "y" + j.toString();
-          tmpski = document.getElementById(tmpid2);
+          tmpski = getDocs(tmpid2) as HTMLElement;
           if (tmpski) {
             tmpski.className =
               selectedDark === 1
@@ -124,7 +130,7 @@ export function About() {
       if (skl3?.length > 0) {
         for (let j = 0; j < skl3?.length; j++) {
           tmpid2 = "z" + j.toString();
-          tmpski = document.getElementById(tmpid2);
+          tmpski = getDocs(tmpid2) as HTMLElement;
           if (tmpski) {
             tmpski.className =
               selectedDark === 1
@@ -137,7 +143,7 @@ export function About() {
       if (skl4?.length > 0) {
         for (let j = 0; j < skl4?.length; j++) {
           tmpid2 = "a" + j.toString();
-          tmpski = document.getElementById(tmpid2);
+          tmpski = getDocs(tmpid2) as HTMLElement;
           if (tmpski) {
             tmpski.className =
               selectedDark === 1
@@ -157,7 +163,7 @@ export function About() {
         "nv1",
       ];
       for (let i = 0; i < tmpCycle.length; i++) {
-        tmpski = document.getElementById(tmpCycle[i]);
+        tmpski = getDocs(tmpCycle[i]) as HTMLElement;
         if (
           tmpski &&
           tmpCycle[i] !== "toggler1" &&

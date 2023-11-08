@@ -42,22 +42,28 @@ export function Work() {
     setSelectedLang(selectedLang === 0 ? 1 : 0);
   };
 
+  const getDocs = (id: string) => {
+    if (typeof window !== "undefined") {
+      return document.getElementById(id);
+    } else return null;
+  };
+
   const toggleDarkMode = () => {
     setSelectedDark(selectedDark === 0 ? 1 : 0);
-    const mainElement = document.getElementById("ninth");
+    const mainElement = getDocs("ninth") as HTMLElement;
     if (mainElement) {
       setNinthId(selectedDark === 1 ? "#393A47" : "#BEBDB9");
       mainElement.style.backgroundColor = ninthId;
     }
     setEightClassName(toggleDarkService(selectedDark, "eight"));
-    const eightElement = document.getElementById("eight");
+    const eightElement = getDocs("eight") as HTMLElement;
     if (eightElement) {
       eightElement.className = eightClassName;
     }
 
     let tmpidx;
     for (let i = 0; i < projectCards.length; i++) {
-      tmpidx = document.getElementById(i.toString());
+      tmpidx = getDocs(i.toString()) as HTMLElement;
       if (tmpidx) {
         tmpidx.className = selectedDark === 1 ? "text-black" : "text-white";
       }
