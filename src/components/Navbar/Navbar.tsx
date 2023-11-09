@@ -18,7 +18,7 @@ export function Navbar() {
     >
       <div
         id="nv1"
-        className="flex items-center justify-between w-full px-4 py-3 md:py-8 md:flex-col md:justify-center gap-y-10 md:px-4 md:h-max bg-white/10 backdrop-blur-sm md:rounded-full"
+        className="flex items-center justify-between w-full px-4 py-3 md:py-8 md:flex-col md:justify-center gap-y-3 md:px-4 md:h-max bg-white/10 backdrop-blur-sm md:rounded-full"
       >
         {dataNavbar.map(({ name, path, icon }) => (
           <div key={name}>

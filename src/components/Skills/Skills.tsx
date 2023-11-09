@@ -2,10 +2,11 @@
 
 import { projectCards } from "./Skills.data";
 import { projectCards2 } from "./Skills.data";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { toggleDarkService } from "@/utils/darkUtils";
 import { RiFlagLine, RiMoonFill } from "react-icons/ri";
 import ProgressBar from "@/utils/progressBar";
+import { toggleLCycle } from "../About/About.data";
 
 export function Skills() {
   const [selectedLang, setSelectedLang] = useState(0);
@@ -16,9 +17,16 @@ export function Skills() {
   );
   const [fifteenth, setFifteenth] = useState("#FFFFFF");
   const [fifteenthA, setFifteenthA] = useState(
-    "text-white bg-black absolute top-[130vh] left-[32vw] w-[60%] text-sm"
+    "text-white bg-black absolute top-[170vh] left-[32vw] w-[60%] text-sm"
   );
   const [twelfth, setTwelfth] = useState("mt-[15vh] text-white bg-black");
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [itemsClassName, setItemsClassName] = useState(
+    "ml-4 first-letter:mt-4 mb-4 text-sm text-white bg-black"
+  );
+  const [itemsClassName2, setItemsClassName2] = useState(
+    "ml-4 first-letter:mt-4 mb-4 text-sm text-white bg-black"
+  );
 
   const lblLang1 = ["Habilidades", "Skills"];
 
@@ -31,6 +39,26 @@ export function Skills() {
       return document.getElementById(id);
     } else return null;
   };
+
+  let toggled = getDocs("toggler2") as HTMLElement;
+  useEffect(() => {
+    setSelectedLang(0);
+    setSelectedDark(1);
+    setFourteenth("#FFFFFF");
+    setFourteenthA(
+      "text-white bg-black absolute top-[25vh] left-[32vw] w-[60%] text-sm"
+    );
+    setFifteenth("#FFFFFF");
+    setFifteenthA(
+      "text-white bg-black absolute top-[170vh] left-[32vw] w-[60%] text-sm"
+    );
+    setTwelfth("mt-[15vh] text-white bg-black");
+    setIsLoaded(true);
+    if (!toggleLCycle[0].init) {
+      toggled?.click();
+      toggleLCycle[0].init = true;
+    }
+  }, [toggled]);
 
   const toggleDarkMode = () => {
     setSelectedDark(selectedDark === 0 ? 1 : 0);
@@ -63,12 +91,27 @@ export function Skills() {
       }
 
       let tmpidx;
-      let tmpski;
-      let tmpid2;
       for (let i = 0; i < projectCards.length; i++) {
-        tmpidx = getDocs(i.toString());
+        tmpidx = getDocs(i.toString()) as HTMLElement;
         if (tmpidx) {
-          tmpidx.className = selectedDark === 1 ? "text-white" : "text-black";
+          setItemsClassName(
+            selectedDark === 1
+              ? "ml-4 first-letter:mt-4 mb-4 text-sm text-black bg-white"
+              : "ml-4 first-letter:mt-4 mb-4 text-sm text-white bg-black"
+          );
+          tmpidx.className = itemsClassName;
+        }
+      }
+
+      for (let i = 0; i < projectCards2.length; i++) {
+        tmpidx = getDocs("x" + i.toString()) as HTMLElement;
+        if (tmpidx) {
+          setItemsClassName2(
+            selectedDark === 1
+              ? "ml-4 first-letter:mt-4 mb-4 text-sm text-black bg-white"
+              : "ml-4 first-letter:mt-4 mb-4 text-sm text-white bg-black"
+          );
+          tmpidx.className = itemsClassName2;
         }
       }
     }
@@ -87,7 +130,7 @@ export function Skills() {
         className="absolute top-[25vh] left-[32vw] w-[80%] bg-white"
       >
         {projectCards.map((item, index) => (
-          <div key={item.id} className="ml-4 first-letter:mt-4 mb-4 text-sm">
+          <div key={item.id} className={itemsClassName}>
             <h2 id={index.toString()} key={item.id}>
               {item.name[selectedLang]}
               {<ProgressBar completed={item.completed} />}
@@ -100,8 +143,8 @@ export function Skills() {
         className="absolute top-[170vh] left-[32vw] w-[80%] bg-white"
       >
         {projectCards2.map((item, index) => (
-          <div key={item.id} className="ml-4 first-letter:mt-4 mb-4 text-sm">
-            <h2 id={index.toString()} key={item.id}>
+          <div key={item.id} className={itemsClassName2}>
+            <h2 id={`x{index.toString()}`} key={item.id}>
               {item.name[selectedLang]}
               {<ProgressBar completed={item.completed} />}
             </h2>

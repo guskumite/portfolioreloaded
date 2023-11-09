@@ -21,6 +21,7 @@ export function Mailer() {
   const frmlbl4 = ["Mensaje", "Message"];
   const rowparam = 4;
   const sendparam = ["Enviar", "Send"];
+  const whereIam = ["Ubicación", "Location"];
 
   const getDocs = (id: string) => {
     if (typeof window !== "undefined") {
@@ -61,7 +62,7 @@ export function Mailer() {
 
   let toggled = getDocs("toggler2") as HTMLElement;
   useEffect(() => {
-    let mainElement = getDocs("frmmain2");
+    let mainElement = getDocs("frmmain2") as HTMLElement;
     if (mainElement) {
       mainElement.className = main2;
     }
@@ -81,9 +82,10 @@ export function Mailer() {
         <div className="absolute top-[19rem] left-[17rem] bg-blue-300 hover:bg-zinc-50">
           <a
             href="https://www.google.com/maps/@4.6764292,-74.0652613,15z?entry=ttu"
-            target="_blank_ noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Ubicación
+            {whereIam[selectedLang]}
           </a>
         </div>
         <h2 className={`ml-[39%] font-bold text-lg mb-2`}>
@@ -136,7 +138,7 @@ export function Mailer() {
                border-solid border-gray-400 md:ml-[10%]
                  md:w-3/4 md:text-sm hover:bg-blue-300"
           >
-            Enviar
+            {sendparam[selectedLang]}
           </button>
         </div>
       </form>

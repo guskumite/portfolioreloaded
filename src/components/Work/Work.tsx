@@ -1,8 +1,4 @@
 "use client";
-import { fadeIn } from "@/utils/motionTransitions";
-import { AvatarWorks } from "../AvatarWorks/AvatarWorks";
-import { Circle } from "../Circle";
-import { motion } from "framer-motion";
 import { projectCards } from "./Work.data";
 import { useState } from "react";
 import { toggleDarkService } from "@/utils/darkUtils";
