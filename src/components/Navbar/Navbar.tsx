@@ -18,7 +18,7 @@ export function Navbar() {
     >
       <div
         id="nv1"
-        className="flex items-center justify-between w-full px-4 py-3 md:py-8 md:flex-col md:justify-center gap-y-3 md:px-4 md:h-max bg-white/10 backdrop-blur-sm md:rounded-full"
+        className="flex items-center justify-between w-full px-4 py-3 md:py-8 md:flex-col md:justify-center gap-y-3 md:px-4 md:h-max bg-white text-black backdrop-blur-sm md:rounded-full"
       >
         {dataNavbar.map(({ name, path, icon }) => (
           <div key={name}>
@@ -29,7 +29,7 @@ export function Navbar() {
               } group transition-all duration-300`}
             >
               <div className="absolute right-0 hidden mr-20 rounded-sm md:group-hover:flex md:group-hover:items-center">
-                <div className="relative flex items-center p-2 leading-none text-black capitalize bg-white rounded-sm">
+                <div className="relative flex items-center p-2 leading-none text-white capitalize bg-white rounded-sm">
                   {name}
                 </div>
                 <div className="absolute border-l-8 border-r-0 border-solid border-l-white border-y-transparent border-y-4 -right-2" />

@@ -1,12 +1,9 @@
 import { fadeIn } from "@/utils/motionTransitions";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import React, { useState } from "react";
 import { RiFlagLine } from "react-icons/ri";
 import { RiMoonFill } from "react-icons/ri";
 import { toggleDarkService } from "@/utils/darkUtils";
-import { Header } from "../Header";
-import { useRouter } from "next/router";
 
 const lblLang1 = ["Bienvenidos a mi portafolio,", "Welcome to my portfolio"];
 const lblLang2 = [
@@ -21,10 +18,14 @@ const lblLang4 = ["Ver proyectos", "See projects"];
 const lblLang5 = ["Contacta conmigo", "Contact me"];
 let firstClassName = "";
 let secondClassName = "";
-let thirdClassName = "";
-let fifthClassName = "";
-let sixthClassName = "";
-let seventhClassName = "";
+let thirdClassName =
+  "mb-5 text-3xl text-black leading-tight md:mb-10 md:text-xl bg-gray-400 bg-opacity-100";
+let fifthClassName =
+  "max-w-sm  mb-10 text-lg text-black md:max-w-2xl md:mx-0 md:mb-16 md:text-xl bg-gray-400 bg-opacity-100";
+let sixthClassName =
+  "text-black px-6 py-3 my-2 transition-all cursor-pointer w-fit rounded-xl hover:shadow-xl hover:shadow-white/50";
+let seventhClassName =
+  "text-black px-6 py-3 my-2 transition-all cursor-pointer border-secondary rounded-xl hover:shadow-xl hover:shadow-secondary";
 
 export function Introduction() {
   const [selectedLang, setSelectedLang] = useState(0);
@@ -52,7 +53,7 @@ export function Introduction() {
 
   return (
     <div id="second" className={secondClassName}>
-      <div className="w-full h-full bg-gradient-to-r from-[#131424]/10 via-black/30 to-black/10">
+      <div className="w-full h-full bg-gradient-to-r from-['#000000'] to-['#FFFFFF']">
         <div className="container grid items-center h-full px-5 mx-auto md:grid-cols-2 md:text-left">
           <motion.div
             className="hidden w-auto h-auto mx-auto md:block"
@@ -60,15 +61,7 @@ export function Introduction() {
             initial="hidden"
             animate="show"
             exit="hidden"
-          >
-            <Image
-              src="/assets/guskumiteavatar2.png"
-              priority
-              width="200"
-              height="175"
-              alt="Avatar"
-            />
-          </motion.div>
+          ></motion.div>
 
           <motion.div
             variants={fadeIn("left", 0.5)}
@@ -78,7 +71,7 @@ export function Introduction() {
           >
             <h1 id="third" className={thirdClassName} onClick={toggleLanguage}>
               {lblLang1[selectedLang]} <br />
-              <span className="text-secondary" onClick={toggleLanguage}>
+              <span className="text-zinc-500" onClick={toggleLanguage}>
                 {lblLang2[selectedLang]}
               </span>
             </h1>
@@ -87,26 +80,26 @@ export function Introduction() {
             </p>
 
             <div className="flex flex-col items-center gap-3 md:gap-10 md:flex-row">
-              <button className="z-20 mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              <button className="z-20 mt-4 bg-zinc-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 {" "}
                 <a id="sixth" href="/works" className={sixthClassName}>
                   {lblLang4[selectedLang]}{" "}
                 </a>
               </button>
-              <button className="z-20 mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              <button className="z-20 mt-4 bg-zinc-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 {" "}
                 <a id="seventh" href="/contact" className={seventhClassName}>
                   {lblLang5[selectedLang]}{" "}
                 </a>
               </button>
               <h3
-                className="absolute left-[10vw] bottom-[10vh] transition-all duration-300 hover:text-secondary"
+                className="absolute left-[10vw] bottom-[10vh] transition-all duration-300 hover:text-zinc-500"
                 onClick={toggleLanguage}
               >
                 <RiFlagLine size="30" />
               </h3>
               <h3
-                className="absolute left-[15vw] bottom-[10vh] transition-all duration-300 hover:text-secondary"
+                className="absolute left-[15vw] bottom-[10vh] transition-all duration-300 hover:text-zinc-500"
                 onClick={toggleDarkMode}
               >
                 <RiMoonFill size="30" />

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main id="first" className="bg-[#393A47] h-[100vh]">
+    <main id="first" className="bg-[#FFFFFF] h-[100vh]">
       <Transition />
       <Cover />
     </main>

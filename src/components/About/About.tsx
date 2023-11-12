@@ -25,10 +25,10 @@ export function About() {
   const [skl3, setSkl3] = useState(skills3);
   const [skl4, setSkl4] = useState(skills4);
   const [tgl1, setTgl1] = useState(
-    "absolute left-[10vw] bottom-[10vh] transition-all duration-300 text-black hover:text-secondary"
+    "absolute left-[10vw] bottom-[10vh] transition-all duration-300 text-black hover:text-zinc-500"
   );
   const [tgl2, setTgl2] = useState(
-    "absolute left-[19vw] bottom-[10vh] transition-all duration-300 text-black hover:text-secondary"
+    "absolute left-[19vw] bottom-[10vh] transition-all duration-300 text-black hover:text-zinc-500"
   );
 
   const lblLang1 = ["Acerca de mi", "About me"];
@@ -58,10 +58,10 @@ export function About() {
         setSkl3(skills3);
         setSkl4(skills4);
         setTgl1(
-          "absolute left-[10vw] bottom-[10vh] transition-all duration-300 text-white hover:text-secondary"
+          "absolute left-[10vw] bottom-[10vh] transition-all duration-300 text-white hover:text-zinc-500"
         );
         setTgl2(
-          "absolute left-[19vw] bottom-[10vh] transition-all duration-300 text-white hover:text-secondary"
+          "absolute left-[19vw] bottom-[10vh] transition-all duration-300 text-white hover:text-zinc-500"
         );
         toggleLCycle[0].init = true;
       }
@@ -177,14 +177,14 @@ export function About() {
           if (tmpski && tmpCycle[i] === "toggler2") {
             tmpski.className =
               selectedDark === 1
-                ? "absolute left-[19vw] bottom-[10vh] transition-all duration-300 text-black hover:text-secondary"
-                : "absolute left-[19vw] bottom-[10vh] transition-all duration-300 text-white hover:text-secondary";
+                ? "absolute left-[19vw] bottom-[10vh] transition-all duration-300 text-black hover:text-zinc-500"
+                : "absolute left-[19vw] bottom-[10vh] transition-all duration-300 text-white hover:text-zinc-500";
           } else {
             if (tmpski && tmpCycle[i] === "toggler1") {
               tmpski.className =
                 selectedDark === 1
-                  ? "absolute left-[10vw] bottom-[10vh] transition-all duration-300 text-black hover:text-secondary"
-                  : "absolute left-[10vw] bottom-[10vh] transition-all duration-300 text-white hover:text-secondary";
+                  ? "absolute left-[10vw] bottom-[10vh] transition-all duration-300 text-black hover:text-zinc-500"
+                  : "absolute left-[10vw] bottom-[10vh] transition-all duration-300 text-white hover:text-zinc-500";
             } else {
               if (tmpski && tmpCycle[i] === "nv1") {
                 tmpski.className =
@@ -277,14 +277,14 @@ export function About() {
       </div>
       <h3
         id="toggler1"
-        className="absolute left-[10vw] bottom-[10vh] transition-all duration-300 text-white hover:text-secondary"
+        className="absolute left-[10vw] bottom-[10vh] transition-all duration-300 text-white hover:text-zinc-500"
         onClick={toggleLanguage}
       >
         <RiFlagLine size="30" />
       </h3>
       <h3
         id="toggler2"
-        className="absolute left-[19vw] bottom-[10vh] transition-all duration-300 text-white hover:text-secondary"
+        className="absolute left-[19vw] bottom-[10vh] transition-all duration-300 text-white hover:text-zinc-500"
         onClick={toggleDarkMode}
       >
         <RiMoonFill size="30" />

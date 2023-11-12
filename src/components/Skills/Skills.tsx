@@ -22,10 +22,10 @@ export function Skills() {
   const [twelfth, setTwelfth] = useState("mt-[15vh] text-white bg-black");
   const [isLoaded, setIsLoaded] = useState(false);
   const [itemsClassName, setItemsClassName] = useState(
-    "ml-4 first-letter:mt-4 mb-4 text-sm text-white bg-black"
+    "first-letter:mt-4 mb-4 text-sm text-white bg-black"
   );
   const [itemsClassName2, setItemsClassName2] = useState(
-    "ml-4 first-letter:mt-4 mb-4 text-sm text-white bg-black"
+    "first-letter:mt-4 mb-4 text-sm text-white bg-black"
   );
 
   const lblLang1 = ["Habilidades", "Skills"];
@@ -96,8 +96,8 @@ export function Skills() {
         if (tmpidx) {
           setItemsClassName(
             selectedDark === 1
-              ? "ml-4 first-letter:mt-4 mb-4 text-sm text-black bg-white"
-              : "ml-4 first-letter:mt-4 mb-4 text-sm text-white bg-black"
+              ? "first-letter:mt-4 mb-4 text-sm text-black bg-white"
+              : "first-letter:mt-4 mb-4 text-sm text-white bg-black"
           );
           tmpidx.className = itemsClassName;
         }
@@ -108,8 +108,8 @@ export function Skills() {
         if (tmpidx) {
           setItemsClassName2(
             selectedDark === 1
-              ? "ml-4 first-letter:mt-4 mb-4 text-sm text-black bg-white"
-              : "ml-4 first-letter:mt-4 mb-4 text-sm text-white bg-black"
+              ? "first-letter:mt-4 mb-4 text-sm text-black bg-white"
+              : "first-letter:mt-4 mb-4 text-sm text-white bg-black"
           );
           tmpidx.className = itemsClassName2;
         }
@@ -152,13 +152,13 @@ export function Skills() {
         ))}
       </div>
       <h3
-        className="absolute left-[10vw] bottom-[10vh] transition-all duration-300 hover:text-secondary"
+        className="text-black absolute left-[10vw] bottom-[10vh] transition-all duration-300 hover:text-zinc-500"
         onClick={toggleLanguage}
       >
         <RiFlagLine size="30" />
       </h3>
       <h3
-        className="absolute left-[19vw] bottom-[10vh] transition-all duration-300 hover:text-secondary"
+        className="text-black absolute left-[19vw] bottom-[10vh] transition-all duration-300 hover:text-zinc-500"
         onClick={toggleDarkMode}
       >
         <RiMoonFill size="30" />

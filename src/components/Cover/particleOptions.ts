@@ -22,12 +22,17 @@ export const optionsParticles = {
       },
     },
   },
+  background: {
+    color: {
+      value: "#F404040",
+    },
+  },
   particles: {
     color: {
-      value: "#fff",
+      value: "#000000",
     },
     links: {
-      color: "#fff",
+      color: "#000000",
       distance: 150,
       enable: true,
       opacity: 0.5,
@@ -40,7 +45,7 @@ export const optionsParticles = {
       direction: undefined,
       enable: true,
       random: true,
-      speed: 1,
+      speed: 0.4,
       straight: false,
     },
     number: {
@@ -61,4 +66,39 @@ export const optionsParticles = {
     },
   },
   detectRetina: true,
+};
+
+export const optionsParticlesStar = {
+  color: {
+    value: "#ffffff",
+  },
+  lineLinked: {
+    enable: false,
+  },
+  move: {
+    bounce: false,
+    direction: "none",
+    enable: true,
+    outMode: "out",
+    random: true,
+    speed: 0.3,
+    straight: false,
+  },
+  opacity: {
+    anim: {
+      enable: true,
+      minimumValue: 0,
+      speed: 1,
+      sync: false,
+    },
+    random: true,
+    value: 1,
+  },
+  shape: {
+    type: "circle",
+  },
+  size: {
+    random: true,
+    value: 3,
+  },
 };
