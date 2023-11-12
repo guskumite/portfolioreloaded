@@ -51,6 +51,8 @@ export function Introduction() {
     seventhClassName = toggleDarkService(selectedDark, "seventh");
   };
 
+  // comment: to reflect changes on buttons hover, version 1.0.8
+
   return (
     <div id="second" className={secondClassName}>
       <div className="w-full h-full bg-gradient-to-r from-['#000000'] to-['#FFFFFF']">
