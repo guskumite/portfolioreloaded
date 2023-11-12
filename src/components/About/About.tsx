@@ -68,7 +68,7 @@ export function About() {
     }
   }, [eleventh, eleventhA, selectedDark, toggled, skl1, skl2, skl3, skl4]);
 
-  // comment
+  // comment: added to generate version 1.0.7
   const toggleLanguage = () => {
     setSelectedLang(selectedLang === 0 ? 1 : 0);
   };
