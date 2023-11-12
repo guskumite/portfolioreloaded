@@ -68,6 +68,7 @@ export function About() {
     }
   }, [eleventh, eleventhA, selectedDark, toggled, skl1, skl2, skl3, skl4]);
 
+  // comment
   const toggleLanguage = () => {
     setSelectedLang(selectedLang === 0 ? 1 : 0);
   };
