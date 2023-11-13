@@ -18,15 +18,16 @@ export function Navbar() {
     >
       <div
         id="nv1"
-        className="flex items-center justify-between w-full px-4 py-3 md:py-8 md:flex-col md:justify-center gap-y-3 md:px-4 md:h-max bg-white text-black backdrop-blur-sm md:rounded-full"
+        className="flex items-center justify-between w-full px-4 py-3 md:py-8 md:flex-col md:justify-center gap-y-3 md:px-4 md:h-max bg-white text-black backdrop-blur-sm md:rounded-full hover:text-zinc-500"
       >
         {dataNavbar.map(({ name, path, icon }) => (
           <div key={name}>
             <Link
               href={path}
               className={`${
-                path === pathName && "currentIconPage"
-              } group transition-all duration-300`}
+                path === pathName &&
+                "text-zinc-400 bg-zinc-800 hover:text-zinc-500"
+              } group transition-all duration-300 hover:text-zinc-500`}
             >
               <div className="absolute right-0 hidden mr-20 rounded-sm md:group-hover:flex md:group-hover:items-center">
                 <div className="relative flex items-center p-2 leading-none text-white capitalize bg-white rounded-sm">

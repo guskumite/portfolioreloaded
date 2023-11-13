@@ -68,7 +68,6 @@ export function About() {
     }
   }, [eleventh, eleventhA, selectedDark, toggled, skl1, skl2, skl3, skl4]);
 
-  // comment: added to generate version 1.0.7
   const toggleLanguage = () => {
     setSelectedLang(selectedLang === 0 ? 1 : 0);
   };
@@ -190,8 +189,8 @@ export function About() {
               if (tmpski && tmpCycle[i] === "nv1") {
                 tmpski.className =
                   selectedDark === 1
-                    ? "flex items-center justify-between w-full px-4 py-3 md:py-8 md:flex-col md:justify-center gap-y-10 md:px-4 md:h-max bg-white/10 text-black backdrop-blur-sm md:rounded-full"
-                    : "flex items-center justify-between w-full px-4 py-3 md:py-8 md:flex-col md:justify-center gap-y-10 md:px-4 md:h-max bg-black/10 text-white backdrop-blur-sm md:rounded-full";
+                    ? "flex items-center justify-between w-full px-4 py-3 md:py-8 md:flex-col md:justify-center gap-y-10 md:px-4 md:h-max bg-white/10 text-black backdrop-blur-sm md:rounded-full hover:text-zinc-500"
+                    : "flex items-center justify-between w-full px-4 py-3 md:py-8 md:flex-col md:justify-center gap-y-10 md:px-4 md:h-max bg-black/10 text-white backdrop-blur-sm md:rounded-full hover:text-zinc-500";
               }
             }
           }

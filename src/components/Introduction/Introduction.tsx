@@ -25,7 +25,7 @@ let fifthClassName =
 let sixthClassName =
   "text-black px-6 py-3 my-2 transition-all cursor-pointer w-fit rounded-xl hover:shadow-xl hover:shadow-white/50";
 let seventhClassName =
-  "text-black px-6 py-3 my-2 transition-all cursor-pointer border-secondary rounded-xl hover:shadow-xl hover:shadow-secondary";
+  "text-black px-6 py-3 my-2 transition-all cursor-pointer w-fit rounded-xl hover:shadow-xl hover:shadow-white/50";
 
 export function Introduction() {
   const [selectedLang, setSelectedLang] = useState(0);
@@ -82,26 +82,26 @@ export function Introduction() {
             </p>
 
             <div className="flex flex-col items-center gap-3 md:gap-10 md:flex-row">
-              <button className="z-20 mt-4 bg-zinc-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              <button className="z-20 mt-4 bg-zinc-500 hover:bg-zinc-500 text-white font-bold py-2 px-4 rounded">
                 {" "}
                 <a id="sixth" href="/works" className={sixthClassName}>
                   {lblLang4[selectedLang]}{" "}
                 </a>
               </button>
-              <button className="z-20 mt-4 bg-zinc-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              <button className="z-20 mt-4 bg-zinc-500 hover:bg-zinc-500 text-white font-bold py-2 px-4 rounded">
                 {" "}
                 <a id="seventh" href="/contact" className={seventhClassName}>
                   {lblLang5[selectedLang]}{" "}
                 </a>
               </button>
               <h3
-                className="absolute left-[10vw] bottom-[10vh] transition-all duration-300 hover:text-zinc-500"
+                className="absolute left-[10vw] bottom-[10vh] transition-all duration-300 hover:bg-zinc-500"
                 onClick={toggleLanguage}
               >
                 <RiFlagLine size="30" />
               </h3>
               <h3
-                className="absolute left-[15vw] bottom-[10vh] transition-all duration-300 hover:text-zinc-500"
+                className="absolute left-[15vw] bottom-[10vh] transition-all duration-300 hover:bg-zinc-500"
                 onClick={toggleDarkMode}
               >
                 <RiMoonFill size="30" />

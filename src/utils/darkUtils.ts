@@ -45,8 +45,8 @@ export const toggleDarkService = (selectedDark: number, id: string) => {
     if (id === "seventh") {
       returnedClassName = genericElement
         ? selectedDark === 0
-          ? "text-black px-6 py-3 my-2 transition-all cursor-pointer border-secondary rounded-xl hover:shadow-xl hover:shadow-secondary"
-          : "text-white px-6 py-3 my-2 transition-all cursor-pointer text-secondary border-secondary rounded-xl hover:shadow-xl hover:shadow-secondary"
+          ? "text-black px-6 py-3 my-2 transition-all cursor-pointer w-fit rounded-xl hover:shadow-xl hover:shadow-white/50"
+          : "text-white px-6 py-3 my-2 transition-all cursor-pointer w-fit rounded-xl hover:shadow-xl hover:shadow-white/50"
         : "";
     }
     if (id === "eight") {

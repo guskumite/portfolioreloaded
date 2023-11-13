@@ -71,7 +71,7 @@ export function Work() {
       <h1 id="eight" className={`${eightClassName} text-center mt-8 mb-16`}>
         {lblLang1[selectedLang]}
       </h1>
-      <div className="absolute left-[25vw] w-[60vw]">
+      <div className="absolute left-[28vw] w-[60vw]">
         <Slider {...settings}>
           {projectCards.map((project) => (
             <div key={project.id} className="project-thumbnail">
@@ -103,18 +103,20 @@ export function Work() {
           ))}
         </Slider>
       </div>
-      <h3
-        className="absolute left-[10vw] bottom-[10vh] transition-all duration-300 hover:text-secondary"
-        onClick={toggleLanguage}
-      >
-        <RiFlagLine size="30" />
-      </h3>
-      <h3
-        className="absolute left-[19vw] bottom-[10vh] transition-all duration-300 hover:text-secondary"
-        onClick={toggleDarkMode}
-      >
-        <RiMoonFill size="30" />
-      </h3>
+      <div className="bg-zinc-800">
+        <h3
+          className="text-black absolute left-[10vw] bottom-[10vh] transition-all duration-300 hover:text-zinc-500"
+          onClick={toggleLanguage}
+        >
+          <RiFlagLine size="30" />
+        </h3>
+        <h3
+          className="text-black absolute left-[19vw] bottom-[10vh] transition-all duration-300 hover:text-zinc-500"
+          onClick={toggleDarkMode}
+        >
+          <RiMoonFill size="30" />
+        </h3>
+      </div>
     </div>
   );
 }

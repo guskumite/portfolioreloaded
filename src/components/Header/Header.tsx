@@ -11,7 +11,7 @@ export function Header() {
   let fourthClassName =
     "my-3 text-3xl text-center text-white md:text-left md:text-lg bg-zinc-800 bg-opacity-100";
   return (
-    <div className="absolute z-20 inline-block w-full top-5 md:top-10">
+    <div className="absolute z-20 inline-block w-full top-2 md:top-5">
       <motion.div
         variants={fadeIn("up", 0.5)}
         initial="hidden"
@@ -25,14 +25,14 @@ export function Header() {
               <span className="text-zinc-500">Dev</span>
             </h1>
           </Link>
-          <div className="flex flex-row absolute top-[57vh] left-[10vw] items-center justify-center gap-7">
+          <div className="flex flex-row absolute top-[57vh] left-[10vw] items-center justify-center gap-7 bg-zinc-500">
             {socialNetworks.map(({ logo, src, id }) => (
               <Link
                 id={id}
                 key={src}
                 href={src}
                 target="_blank"
-                className="transition-all duration-300 hover:text-zinc-500"
+                className="transition-all duration-300 hover:text-zinc-500 hover:bg-zinc-800"
               >
                 {logo}
               </Link>

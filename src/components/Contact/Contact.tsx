@@ -11,13 +11,13 @@ export function Mailer() {
   const [selectedLang, setSelectedLang] = useState(0);
   const [selectedDark, setSelectedDark] = useState(1);
   const [main2, setMain2] = useState(
-    "text-black bg-slate-500 h-full mt-4 absolute top-[0.5rem] pt-8 border-zinc-500 w-full md:w-3/4"
+    "text-black bg-zinc-400 h-full mt-4 absolute top-[0.5rem] pt-8 border-zinc-500 w-full"
   );
 
   const frmlbl1 = ["Contactame", "Contact Me"];
-  const frmlbl2 = ["Nombre", "Name"];
-  const frmlbl3 = ["Correo", "Email"];
-  const frmlbl3a = ["electrónico", ""];
+  const frmlbl2 = ["Nombre", "Name   "];
+  const frmlbl3 = ["Correo", "Your"];
+  const frmlbl3a = ["electrónico", "E-mail"];
   const frmlbl4 = ["Mensaje", "Message"];
   const rowparam = 4;
   const sendparam = ["Enviar", "Send"];
@@ -38,8 +38,8 @@ export function Mailer() {
     setSelectedDark(selectedDark === 0 ? 1 : 0);
     setMain2(
       selectedDark === 1
-        ? "text-black bg-slate-500 h-full mt-4 absolute top-[0.5rem] pt-8 border-zinc-500 w-full md:w-3/4"
-        : "text-slate-500 bg-black h-full mt-4 absolute top-[0.5rem] pt-8 border-black w-full md:w-3/4"
+        ? "flex flex-cols text-black bg-zinc-400 h-full mt-4 absolute top-[0.5rem] pt-8 border-zinc-500 w-full"
+        : "flex flex-cols text-zinc-400 bg-black h-full mt-4 absolute top-[0.5rem] pt-8 border-black w-full"
     );
     mainElement = getDocs("frmmain2") as HTMLElement;
     if (mainElement) {
@@ -77,81 +77,93 @@ export function Mailer() {
       <form
         id="frmmain2"
         onSubmit={handleSubmit}
-        className={`text-black bg-slate-500 h-full mt-4 absolute top-[0.5rem] pt-8 border-black w-full md:w-3/4`}
+        className={`flex flex-cols text-black bg-zinc-400 h-full mt-4 absolute top-[0.1rem] pt-8 border-black w-full`}
       >
-        <div className="absolute top-[19rem] left-[17rem] bg-blue-300 hover:bg-zinc-50">
-          <a
-            href="https://www.google.com/maps/@4.6764292,-74.0652613,15z?entry=ttu"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {whereIam[selectedLang]}
-          </a>
-        </div>
-        <h2 className={`ml-[39%] font-bold text-lg mb-2`}>
+        <h2
+          className={`absolute top-[0rem] ml-[39%] mt-[10%] font-bold text-lg mb-2`}
+        >
           {frmlbl1[selectedLang]}
         </h2>
-        <div className="w-[48%] ml-32 border-2 border-transparent border-solid">
-          <label className="absolute top-[4.7rem] left-[4.7rem] text-xs">
+        <div className="w-[99%] absolute top-[7rem] left-[-3.5rem] md:left-[1.3rem]">
+          <label className="absolute left-[4rem] mt-1 text-xs">
             {" "}
             {frmlbl2[selectedLang]}
           </label>
-          <label className="absolute top-[6.1rem] left-[4.7rem] text-xs">
-            {frmlbl3[selectedLang]}
-          </label>
-          <label className="absolute top-[6.8rem] left-[4.7rem] text-xs">
-            {frmlbl3a[selectedLang]}
-          </label>
-          <label className="absolute top-[8rem] left-[4.7rem] text-xs">
-            {frmlbl4[selectedLang]}
-          </label>
-
           <input
-            className="ml-[8%] w-[89%] mt-[1%] mb-[1%] bg-[lightblue] border-solid custom-placeholder text-md
-               md:text-sm hover:bg-blue-300"
+            className={`w-[23.7rem] absolute left-[7.7rem] bg-[gray] border-solid custom-placeholder text-md
+                     md:text-sm hover:bg-zinc-300`}
             autoComplete="off"
             required={true}
             placeholder=""
             id="Name"
             type="text"
           />
+        </div>
+        <div
+          className={`w-[99%] absolute top-[8.7rem] left-[-3.5rem] md:left-[1.3rem]`}
+        >
+          <div className="grid grid-rows-2">
+            <label className="absolute left-[4rem] text-xs">
+              {frmlbl3[selectedLang]}
+            </label>
+            <label className="absolute left-[4rem] top-[1rem] text-xs">
+              {frmlbl3a[selectedLang]}
+            </label>
+          </div>
           <input
-            className="ml-[8%] w-[89%] mt-[1%] mb-[1%] bg-[lightblue] border-solid custom-placeholder text-md
-               md:text-sm hover:bg-blue-300"
+            className={`w-[23.7rem] absolute left-[7.6rem] bg-[gray] border-solid custom-placeholder text-md
+                        md:text-sm hover:bg-zinc-300`}
             autoComplete="off"
             required={true}
             placeholder=""
             id="Email"
             type="text"
           />
+        </div>
+        <div className="w-[80%] absolute top-[10.7rem] left-[-4.2rem] md:left-[0.5rem]">
+          <label className="absolute left-[4.5rem] mt-2 text-xs">
+            {frmlbl4[selectedLang]}
+          </label>
           <textarea
-            className="ml-[8%] w-[89%] mt-[1%] mb-[1%] h-[7rem] bg-[lightblue] border-solid custom-placeholder
-               text-md md:text-sm hover:bg-blue-300"
+            className="absolute left-[8.5rem] w-[60%] h-[7rem] bg-[gray] border-solid custom-placeholder
+                        text-md md:text-sm hover:bg-zinc-300"
             rows={4}
             autoComplete="off"
             required={true}
             placeholder=""
             id="Message"
           />
+        </div>
+        <div className="absolute top-[17rem] left-[13.5rem] grid grid-cols-[1fr,1fr] gap-2">
           <button
-            className="ml-[25%] mt-4 mb-4 bg-cyan-600 w-[5rem] text-black text-lg
-               border-solid border-gray-400 md:ml-[10%]
-                 md:w-3/4 md:text-sm hover:bg-blue-300"
+            className="mt-4 mb-4 bg-zinc-600 text-black text-lg
+                        border-solid border-gray-400 md:ml-[30%]
+                        md:w-[60%] md:text-sm hover:bg-zinc-300"
           >
             {sendparam[selectedLang]}
           </button>
+          <div className="mt-4 h-[2rem] bg-zinc-300 hover:bg-zinc-50">
+            <a
+              href="https://www.google.com/maps/@4.6764292,-74.0652613,15z?entry=ttu"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {whereIam[selectedLang]}
+            </a>
+          </div>
         </div>
       </form>
+
       <h3
         id="toggler1"
-        className="absolute left-[10vw] bottom-[10vh] transition-all duration-300 text-white hover:text-secondary"
+        className="absolute left-[10vw] bottom-[10vh] transition-all duration-300 text-white hover:text-zinc-500"
         onClick={toggleLanguage}
       >
         <RiFlagLine size="30" />
       </h3>
       <h3
         id="toggler2"
-        className="absolute left-[19vw] bottom-[10vh] transition-all duration-300 text-white hover:text-secondary"
+        className="absolute left-[19vw] bottom-[10vh] transition-all duration-300 text-white hover:text-zinc-500"
         onClick={toggleDarkMode}
       >
         <RiMoonFill size="30" />
