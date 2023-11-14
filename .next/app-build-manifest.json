@@ -11,15 +11,10 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/(routes)/about/page": [
+    "/(routes)/contact/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(routes)/about/page.js"
-    ],
-    "/(routes)/skills/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(routes)/skills/page.js"
+      "static/chunks/app/(routes)/contact/page.js"
     ],
     "/(routes)/works/page": [
       "static/chunks/webpack.js",
@@ -27,10 +22,15 @@
       "static/css/app/(routes)/works/page.css",
       "static/chunks/app/(routes)/works/page.js"
     ],
-    "/(routes)/contact/page": [
+    "/(routes)/vitae/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(routes)/contact/page.js"
+      "static/chunks/app/(routes)/vitae/page.js"
+    ],
+    "/(routes)/academlo/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(routes)/academlo/page.js"
     ]
   }
 }

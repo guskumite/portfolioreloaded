@@ -90,7 +90,7 @@ export function Mailer() {
             {frmlbl2[selectedLang]}
           </label>
           <input
-            className={`w-[23.7rem] absolute left-[7.7rem] bg-[gray] border-solid custom-placeholder text-md
+            className={`w-[18rem] absolute left-[7.7rem] bg-[gray] border-solid custom-placeholder text-md
                      md:text-sm hover:bg-zinc-300`}
             autoComplete="off"
             required={true}
@@ -111,7 +111,7 @@ export function Mailer() {
             </label>
           </div>
           <input
-            className={`w-[23.7rem] absolute left-[7.6rem] bg-[gray] border-solid custom-placeholder text-md
+            className={`w-[18rem] absolute left-[7.6rem] bg-[gray] border-solid custom-placeholder text-md
                         md:text-sm hover:bg-zinc-300`}
             autoComplete="off"
             required={true}
@@ -125,8 +125,8 @@ export function Mailer() {
             {frmlbl4[selectedLang]}
           </label>
           <textarea
-            className="absolute left-[8.5rem] w-[60%] h-[7rem] bg-[gray] border-solid custom-placeholder
-                        text-md md:text-sm hover:bg-zinc-300"
+            className="absolute left-[8.5rem] w-[90%] h-[7rem] bg-[gray] border-solid custom-placeholder
+                        text-md md:text-sm hover:bg-zinc-300 md:w-[50%]"
             rows={4}
             autoComplete="off"
             required={true}
@@ -134,7 +134,7 @@ export function Mailer() {
             id="Message"
           />
         </div>
-        <div className="absolute top-[17rem] left-[13.5rem] grid grid-cols-[1fr,1fr] gap-2">
+        <div className="absolute top-[17rem] left-[6.5rem] grid grid-cols-[1fr,1fr] gap-2">
           <button
             className="mt-4 mb-4 bg-zinc-600 text-black text-lg
                         border-solid border-gray-400 md:ml-[30%]

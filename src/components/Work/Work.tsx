@@ -88,8 +88,8 @@ export function Work() {
                 <Image
                   src={project.thumbnailUrl}
                   alt={project.name}
-                  height={200}
-                  width={400}
+                  width={433}
+                  height={197}
                 />
               </a>
               <div className="skills flex flex-row">
