@@ -17,8 +17,8 @@ export const toggleDarkService = (selectedDark: number, id: string) => {
     if (id === "third") {
       returnedClassName = genericElement
         ? selectedDark === 1
-          ? "mb-5 text-3xl text-white leading-tight md:mb-10 md:text-xl bg-gray-400 bg-opacity-100"
-          : "mb-5 text-3xl text-black leading-tight md:mb-10 md:text-xl bg-gray-400 bg-opacity-100"
+          ? "mb-5 text-lg text-white leading-tight md:mb-10 md:text-xl bg-gray-400 bg-opacity-100"
+          : "mb-5 text-lg text-black leading-tight md:mb-10 md:text-xl bg-gray-400 bg-opacity-100"
         : "";
     }
     if (id === "fourth") {
