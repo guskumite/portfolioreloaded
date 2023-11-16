@@ -25,7 +25,7 @@ export function Header() {
               <span className="text-zinc-500">Dev</span>
             </h1>
           </Link>
-          <div className="flex flex-row absolute top-[70vh] left-[10vw] items-center justify-center gap-7 bg-zinc-500">
+          <div className="flex flex-row absolute top-[72vh] left-[10vw] items-center justify-center gap-7 bg-zinc-500">
             {socialNetworks.map(({ logo, src, id }) => (
               <Link
                 id={id}
