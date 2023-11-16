@@ -101,7 +101,7 @@ export function Introduction() {
                 <RiFlagLine size="30" />
               </h3>
               <h3
-                className="absolute left-[15vw] bottom-[10vh] transition-all duration-300 hover:bg-zinc-500"
+                className="absolute left-[16vw] bottom-[10vh] transition-all duration-300 hover:bg-zinc-500"
                 onClick={toggleDarkMode}
               >
                 <RiMoonFill size="30" />
