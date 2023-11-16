@@ -19,7 +19,7 @@ const lblLang5 = ["Contacta conmigo", "Contact me"];
 let firstClassName = "";
 let secondClassName = "";
 let thirdClassName =
-  "mb-5 text-sm text-black leading-tight md:mb-10 md:text-xl bg-gray-400 bg-opacity-100";
+  "mb-5 md:text-lg text-sm text-black leading-tight md:mb-10 md:text-xl bg-gray-400 bg-opacity-100";
 let fifthClassName =
   "max-w-sm  mb-10 text-lg text-black md:max-w-2xl md:mx-0 md:mb-16 md:text-xl bg-gray-400 bg-opacity-100";
 let sixthClassName =
@@ -50,8 +50,6 @@ export function Introduction() {
     sixthClassName = toggleDarkService(selectedDark, "sixth");
     seventhClassName = toggleDarkService(selectedDark, "seventh");
   };
-
-  // comment: to reflect changes on buttons hover, version 1.0.8
 
   return (
     <div id="second" className={secondClassName}>
@@ -101,7 +99,7 @@ export function Introduction() {
                 <RiFlagLine size="30" />
               </h3>
               <h3
-                className="absolute left-[16vw] bottom-[10vh] transition-all duration-300 hover:bg-zinc-500"
+                className="absolute left-[17vw] bottom-[10vh] transition-all duration-300 hover:bg-zinc-500"
                 onClick={toggleDarkMode}
               >
                 <RiMoonFill size="30" />
