@@ -7,8 +7,8 @@ import { toggleDarkService } from "@/utils/darkUtils";
 
 const lblLang1 = ["Bienvenidos a mi portafolio,", "Welcome to my portfolio"];
 const lblLang2 = [
-  "Soy Gustavo Molano, desarrollador Backend",
-  "I am Gustavo Molano, a Backend developer",
+  "Soy Gustavo Molano, desarrollador Backend y Frontend",
+  "I am Gustavo Molano, a Backend and Frontend developer",
 ];
 const lblLang3 = [
   "En este portafolio muestro los principales proyectos desarrollados a lo largo de mi trayectoria de aprendizaje en Academlo",
