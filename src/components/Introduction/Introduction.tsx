@@ -19,7 +19,7 @@ const lblLang5 = ["Contacta conmigo", "Contact me"];
 let firstClassName = "";
 let secondClassName = "";
 let thirdClassName =
-  "mb-5 text-lg text-black leading-tight md:mb-10 md:text-xl bg-gray-400 bg-opacity-100";
+  "mb-5 text-sm text-black leading-tight md:mb-10 md:text-xl bg-gray-400 bg-opacity-100";
 let fifthClassName =
   "max-w-sm  mb-10 text-lg text-black md:max-w-2xl md:mx-0 md:mb-16 md:text-xl bg-gray-400 bg-opacity-100";
 let sixthClassName =
