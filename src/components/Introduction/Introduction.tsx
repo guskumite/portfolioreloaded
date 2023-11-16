@@ -93,13 +93,13 @@ export function Introduction() {
                 </a>
               </button>
               <h3
-                className="absolute left-[10vw] bottom-[10vh] transition-all duration-300 hover:bg-zinc-500"
+                className="absolute left-[10vw] bottom-[9vh] transition-all duration-300 hover:bg-zinc-500"
                 onClick={toggleLanguage}
               >
                 <RiFlagLine size="30" />
               </h3>
               <h3
-                className="absolute left-[17vw] bottom-[10vh] transition-all duration-300 hover:bg-zinc-500"
+                className="absolute left-[17vw] bottom-[9vh] transition-all duration-300 hover:bg-zinc-500"
                 onClick={toggleDarkMode}
               >
                 <RiMoonFill size="30" />
